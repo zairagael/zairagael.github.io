@@ -1,0 +1,411 @@
+/*Estos son generales*/
+img { 
+    width: 100%;
+}
+
+.eltodo {
+    display: flex;
+    justify-content: center;
+}
+
+.todo {
+    width: 80%;
+    background-color: #252626;
+    font-family: "Montserrat Semibold", serif; 
+    font-size: 40px;
+}
+
+body {
+    background-color: #252626; 
+}
+
+/*Este estilo es solo del titulo*/
+
+.contenedortitulo {
+    background-color: #d90667;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo {
+    width: 50%;
+    margin: 20px;
+}
+
+/*Este estilo es solo delas sesiones*/
+
+.contenedor1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap; 
+    padding: 10px;
+    animation: slideInLeft 1.5s ease-out forwards; 
+}
+
+.secciones {
+    color: #ffffff;
+    margin: 5px;
+}
+
+.secciones a {
+    color: #ffffff; 
+    text-decoration: none; 
+    font-size: 30px; 
+    padding: 10px;
+    display: block; 
+}
+
+.secciones a:link {
+    color: #ffffff; 
+}
+
+.secciones a:visited {
+    color: #ffffff; 
+}
+
+.secciones a:hover {
+    color: #78c5c3; 
+}
+
+.secciones a:active {
+    color: #78c5c3;
+}
+
+@media (max-width: 768px) {
+    .contenedor1 {
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    .secciones {
+        margin: 10px 0; 
+    }
+
+    .secciones a {
+        font-size: 20px; 
+        padding: 15px; 
+    }
+}
+
+/*Este estilo es para el navegador de areas*/
+
+.contenedor2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: baseline;
+    margin: 20px 0;
+    background-color: #f2ac28; 
+}
+
+.salas {
+    display: flex;
+    flex-direction: row;
+}
+
+.salas p {
+    font-size: 20px;
+    margin: 20px;
+    color: #252626;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.salas p:nth-child(1) {
+    animation-delay: 0s; 
+}
+
+.salas p:nth-child(2) {
+    animation-delay: 0.5s; 
+}
+
+.salas p:nth-child(3) {
+    animation-delay: 1s; 
+}
+
+.salas p:nth-child(4) {
+    animation-delay: 1.5s; 
+}
+
+.salas a {
+    text-decoration: none;
+}
+
+.salas a:link {
+    color: #252626; 
+}
+
+.salas a:visited {
+    color: #252626; 
+}
+
+.salas a:hover {
+    color: #ffffff; 
+}
+
+.salas a:active {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) { 
+    .contenedor2 {
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;  
+    }
+
+    .salas {
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
+
+/*Este es el estilo del contenedor 3*/
+
+.contenedor3 {
+    display: flex;
+    background-color: #d90667;
+    flex-wrap: wrap;
+    right: 100%;
+    padding: 50px;
+    text-align: center;
+    opacity: 0; 
+    animation: fadeInOpacity 2s ease-out forwards; 
+}
+
+.textoarea h5 {
+    color: #ffffff;
+    font-size: 50px;
+    margin-bottom: 10px; 
+}
+
+.textoarea p {
+    font-family: "Alegreya Sans Medium";
+    color: #ffffff;
+    font-size: 35px;
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .contenedor3 {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .textoarea h5 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .textoarea p {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}
+
+/*Este es el estilo de contenedoressalas1*/
+
+.contenedoressalas1 {
+    display: flex;
+    background-color: #78c5c3;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px 0;
+    align-items: center;
+    opacity: 0; 
+    transform: translateX(-100%); 
+    animation: slideInLeft 1.5s ease-out forwards;
+}
+
+.textos1 {
+    width: 50%;
+    margin: 20px;
+}
+
+.imagenes1 {
+    width: 45%;
+    display: inline-block;
+}
+
+.textos1 h5 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.textos1 p {
+    font-family: "Alegreya Sans Medium";
+    font-size: 25px;
+    margin-top: 0;
+}
+
+/*Este es el estilo de contenedoressalas2*/
+
+.contenedoressalas2 {
+    display: flex;
+    background-color: #78c5c3;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px 0;
+    align-items: center;
+    opacity: 0; 
+    transform: translateX(100%); 
+    animation: slideInRight 1.5s ease-out forwards; 
+}
+
+.textos2 {
+    width: 50%;
+    margin: 20px;
+    order: 2;
+}
+
+.imagenes2 {
+    width: 45%;
+    display: inline-block;
+    order: 1;
+}
+
+.textos2 h5 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.textos2 p {
+    font-family: "Alegreya Sans Medium";
+    font-size: 25px;
+    margin-top: 0;
+}
+
+/*Este es el estilo delas patas*/
+
+.pie {
+    background-color: #f2ac28;
+    font-family: "Montserrat Semibold", serif;
+    font-size: 20px;
+    width: 100%;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    color: #2c2c2c; 
+}
+
+.direccion {
+    width: 40%;
+}
+
+.direccion p {
+    padding: 20px;
+    margin: 20px; 
+    text-align: left;
+}
+
+.contenedor4 {
+    display: flex; 
+    gap: 10px; 
+}
+
+.redes {
+    width: 90px; 
+    height: auto; 
+    padding: 30px;
+}
+
+@media (max-width: 768px) { 
+    .pie {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .direccion {
+        width: 100%;
+    }
+
+    .contenedor4 {
+        justify-content: center; 
+        margin-top: 20px;
+    }
+
+    .redes {
+        width: 50px; 
+    }
+}
+
+/*estilo en animaciónes*/
+
+.contenedor1 {
+  animation: slideInLeft 1.5s ease-out forwards; 
+}
+
+.contenedortitulo img {
+  animation: fadeIn 1.5s ease-out forwards; 
+}
+
+.salas p {
+  opacity: 0; 
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.salas p:nth-child(1) {
+  animation-delay: 0s; 
+}
+
+.salas p:nth-child(2) {
+  animation-delay: 0.5s; 
+}
+
+.salas p:nth-child(3) {
+  animation-delay: 1s; 
+}
+
+.salas p:nth-child(4) {
+  animation-delay: 1.5s; 
+}
+
+/*keyframes*/
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%); 
+    opacity: 0; 
+  }
+  100% {
+    transform: translateX(0); 
+    opacity: 1; 
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%); 
+    opacity: 0; 
+  }
+  100% {
+    transform: translateX(0); 
+    opacity: 1; 
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
+.contenedoressalas1.in-view,
+.contenedoressalas2.in-view {
+    animation-play-state: running; 
+}

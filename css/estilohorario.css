@@ -1,0 +1,396 @@
+/*Estos son generales*/
+  img { 
+    width: 100%;
+   }
+
+.eltodo {
+    display: flex;
+    justify-content: center;
+}
+   .todo {
+    width: 80%;
+    background-color:#252626 ;
+    font-family:"Montserrat Semibold", serif; 
+    font-size: 40px;
+   }
+
+   body {
+    background-color: #252626; 
+}
+
+/*Este estilo es solo del titulo*/
+
+.contenedortitulo {
+  background-color: #d90667;
+  display: flex;
+  justify-content: center;
+}
+
+ .titulo {
+    width: 50%;
+     margin: 20px;
+  }
+
+/*Este estilo es solo delas sesiones*/
+
+.contenedor1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap; 
+    padding: 10px;
+}
+
+.secciones {
+    color: #ffffff;
+    margin: 5px;
+}
+
+.secciones a {
+    color: #ffffff; 
+    text-decoration: none; 
+    font-size: 30px; 
+    padding: 10px;
+    display: block; 
+}
+
+.secciones a:link {
+    color: #ffffff; 
+}
+
+.secciones a:visited {
+    color: #ffffff; 
+}
+
+.secciones a:hover {
+    color: #78c5c3; 
+}
+
+.secciones a:active {
+    color: #78c5c3;
+}
+
+@media (max-width: 768px) {
+    .contenedor1 {
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    .secciones {
+        margin: 10px 0; 
+    }
+
+    .secciones a {
+        font-size: 20px; 
+        padding: 15px; 
+    }
+}
+ 
+/* Aquí viene el slider*/
+.contenedor3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d90667;
+    padding: 50px;
+    position: relative;
+    margin: 20px 0;
+    opacity: 0; 
+    animation: fadeIn 1.5s ease-out forwards; 
+}
+
+.textoarea h5 {
+    color: #ffffff;
+    font-size: 50px;
+    margin-bottom: 10px; 
+}
+
+.textoarea p {
+    font-family: "Alegreya Sans Medium";
+    color: #ffffff;
+    font-size: 35px;
+    margin-top: 0;
+}
+
+.slider-wrapper {
+    background-color: #f2ac28;
+    width: 70%;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.dinos {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.secun {
+    width: 100%;
+    height: auto;
+}
+
+.textoprensa {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    max-width: 80%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Esto es para desvanecer*/
+
+.contenedor1 h5 {
+    color: #ffffff;
+}
+
+.desvanecer {
+    opacity: 0; /* Empieza invisible */
+    transform: translateY(20px); /* Opcional: se mueve ligeramente hacia abajo */
+    transition: opacity 1s ease, transform 1s ease; /* Suaviza la transición */
+}
+
+.desvanecer.active {
+    opacity: 1; /* Se hace visible */
+    transform: translateY(0); /* Vuelve a su posición original */
+}
+
+.desvanecedor {}
+
+/*Este es el estilos de las salas de prensa*/
+
+.contenedor5 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 10px; 
+}
+
+
+
+.prensa  {
+    background-color: #78c5c3; 
+    padding: 20px;
+    width: 45%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; 
+}
+
+.prensa.active  {
+    opacity: 1; 
+}
+
+.prensa:hover {
+    background-color: #ffffff;
+    color: #252626; 
+}
+
+
+.prensa a {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+.prensa a:link,
+.prensa a:visited {
+    color: inherit; 
+}
+
+.prensa a:hover {
+    color: #252626; 
+}
+
+.imagenprensa {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .prensa {
+        width: 100%;
+    }
+}
+
+.prensa h5 {
+    font-size: 20px;
+    margin-bottom: 10px; 
+}
+
+.prensa p {
+    font-family: "Alegreya Sans Medium";
+    font-size: 15px;
+    margin-top: 0;
+}
+
+/*Este es el estilo delas patas*/
+
+
+.pie {
+    background-color: #f2ac28;
+    font-family: "Montserrat Semibold", serif;
+    font-size: 20px;
+    width: 100%;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    color: #2c2c2c; 
+}
+
+.direccion {
+    width: 40%;
+}
+
+.direccion p {
+    padding: 20px;
+    margin: 20px; 
+    text-align: left;
+}
+
+.contenedor4 {
+    display: flex; 
+    gap: 10px; 
+}
+
+.redes {
+    width: 90px; 
+    height: auto; 
+    padding: 30px;
+}
+
+@media (max-width: 768px) { 
+    .pie {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .direccion {
+        width: 100%;
+    }
+
+    .contenedor4 {
+        justify-content: center; 
+        margin-top: 20px;
+    }
+
+    .redes {
+        width: 50px; 
+    }
+}
+
+/*estilo en animaciones*/
+
+.contenedor1 {
+  animation: slideInLeft 1.5s ease-out forwards; 
+}
+
+.contenedortitulo img {
+  animation: fadeIn 1.5s ease-out forwards; 
+}
+
+.salas p {
+  opacity: 0; 
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.salas p:nth-child(1) {
+  animation-delay: 0s; 
+}
+
+.salas p:nth-child(2) {
+  animation-delay: 0.5s; 
+}
+
+.salas p:nth-child(3) {
+  animation-delay: 1s; 
+}
+
+.salas p:nth-child(4) {
+  animation-delay: 1.5s; 
+}
+
+/*keyframes*/
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%); 
+    opacity: 0; 
+  }
+  100% {
+    transform: translateX(0); 
+    opacity: 1; 
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%); 
+    opacity: 0; 
+  }
+  100% {
+    transform: translateX(0); 
+    opacity: 1; 
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1; 
+  }
+}

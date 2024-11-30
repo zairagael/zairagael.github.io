@@ -1,0 +1,371 @@
+
+/*Estos son generales*/
+  img { 
+  	width: 100%;
+   }
+
+   .eltodo {
+    display: flex;
+    justify-content: center;
+   }
+
+   .todo {
+    width: 80%;
+   	background-color:#252626 ;
+   	font-family:"Montserrat Semibold", serif; 
+   	font-size: 40px;
+   }
+
+body {
+    background-color: #252626; 
+}
+
+
+
+/*Este estilo es solo del titulo*/
+
+
+.contenedortitulo {
+    background-color: #d90667;
+    display: flex;
+    justify-content: center;
+}
+
+ .titulo {
+    width: 50%;
+     margin: 20px;
+  }
+
+
+/*Este estilo es solo delas sesiones*/
+
+.contenedor1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap; 
+    padding: 10px;
+}
+
+.secciones {
+    color: #ffffff;
+    margin: 5px;
+}
+
+.secciones a {
+    color: #ffffff; 
+    text-decoration: none; 
+    font-size: 30px; 
+    padding: 10px;
+    display: block; 
+}
+
+.secciones a:link {
+    color: #ffffff; 
+}
+
+.secciones a:visited {
+    color: #ffffff; 
+}
+
+.secciones a:hover {
+    color: #78c5c3; 
+}
+
+.secciones a:active {
+    color: #78c5c3;
+}
+
+@media (max-width: 768px) {
+    .contenedor1 {
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    .secciones {
+        margin: 10px 0; 
+    }
+
+    .secciones a {
+        font-size: 20px; 
+        padding: 15px; 
+    }
+}
+
+/*Este estilo es para el navegador de areas*/
+
+.contenedor2 {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.salas {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.salas p {
+    font-size: 30px;
+    margin: 20px;
+    color: #252626;
+    padding: 30px;
+    background-color: #78c5c3;
+}
+
+.salas a {
+    text-decoration: none;
+}
+
+.principo {
+    width: 90%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: #cccccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slide img {
+    transition: opacity 0.3s ease-in-out; 
+}
+
+.slide img:hover {
+    opacity: 0.7; 
+}
+
+.dot.active {
+    background-color: #f2ac28;
+}
+
+.salas a:link {
+    color: #252626; 
+}
+
+.salas a:visited {
+    color: #252626; 
+}
+
+.salas a:hover {
+    color: #ffffff; 
+}
+
+.salas a:active {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .contenedor2 {
+        flex-direction: column; 
+    }
+
+    .salas {
+        width: 100%; 
+        order: 2; 
+    }
+
+    .principo {
+        width: 100%; 
+        order: 1; 
+    }
+}
+
+/*Este estilo es contenedor3*/
+
+.contenedor3 {
+    display: flex;
+    flex-direction: row;
+    background-color: #d0d70a;
+    flex-wrap: wrap;
+    right: 100%;
+    padding: 50px;
+    text-align: center;
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; 
+}
+
+.contenedor3.active {
+    opacity: 1; 
+}
+
+.dinos {
+    display: inline-block;
+}
+
+.secun {
+  	width: 40%;
+    align-items: center
+  }
+
+  
+
+@media (max-width: 768px) {
+    .contenedor3 {
+        flex-direction: row; 
+        justify-content: center;
+    }
+
+    .secun {
+        width: 100%; 
+    }
+}
+
+/*Este es el estilo delas patas*/
+
+
+.pie {
+    background-color: #f2ac28;
+    font-family: "Montserrat Semibold", serif;
+    font-size: 20px;
+    width: 100%;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    color: #2c2c2c; 
+}
+
+.direccion {
+    width: 40%;
+}
+
+.direccion p {
+    padding: 20px;
+    margin: 20px; 
+    text-align: left;
+}
+
+.contenedor4 {
+    display: flex; 
+    gap: 10px; 
+}
+
+.redes {
+    width: 90px; 
+    height: auto; 
+    padding: 30px;
+}
+
+@media (max-width: 768px) { 
+    .pie {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .direccion {
+        width: 100%;
+    }
+
+    .contenedor4 {
+        justify-content: center; 
+        margin-top: 20px;
+    }
+
+    .redes {
+        width: 50px; 
+    }
+}
+
+/*estilo en animaciónes*/
+
+.contenedor1 {
+  animation: slideInLeft 1.5s ease-out; 
+}
+
+
+.contenedortitulo img {
+  animation: fadeIn 1.5s ease-out; 
+}
+
+.salas p {
+  opacity: 0; 
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.salas p:nth-child(1) {
+  animation-delay: 0s; 
+}
+
+.salas p:nth-child(2) {
+  animation-delay: 0.5s; 
+}
+
+.salas p:nth-child(3) {
+  animation-delay: 1s; 
+}
+
+.salas p:nth-child(4) {
+  animation-delay: 1.5s; 
+}
+
+
+
+/*keyframes*/
+
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%); 
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); 
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%); 
+    opacity: 0; 
+  }
+  100% {
+    transform: translateX(0); 
+    opacity: 1; 
+  }
+}
